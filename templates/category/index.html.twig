@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h1>Liste des catégories</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nom</th>
+                <th>Name</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -25,11 +25,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">Aucune catégorie</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_category_new') }}">Créer nouveau</a>
+    <a href="{{ path('app_category_new') }}">Nouvelle catégorie</a>
 {% endblock %}

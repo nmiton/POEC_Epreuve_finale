@@ -12,20 +12,32 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
 
-        $category = new Category();
-        $category->setName("Hardcore");
-        $manager->persist($category);
+        $category1 = new Category();
+        $category1->setName("Hardcore");
+        $manager->persist($category1);
+
+        $category2 = new Category();
+        $category2->setName("Techno");
+        $manager->persist($category2);
+
+        $category3 = new Category();
+        $category3->setName("Minimal");
+        $manager->persist($category3);
+
+        $category4 = new Category();
+        $category4->setName("Drum&Bass");
+        $manager->persist($category4);
 
         $article = new Article();
         $article->setTitre("Article 1");
-        $article->setContenu("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra urna in nunc dapibus tincidunt et eu magna. Pellentesque venenatis varius orci sit amet condimentum. Quisque sit amet enim id nisl consectetur gravida. Curabitur efficitur felis rutrum ligula convallis convallis. Vestibulum eget dictum lorem. Vestibulum est justo, fermentum eu eleifend vestibulum, lacinia efficitur erat. Proin a ligula lorem. In iaculis dignissim sodales.");
-        $article->setCategory($category);
+        $article->setContenu("https://soundcloud.com/leksmusiclive/newlivextractflp");
+        $article->setCategory($category1);
         $manager->persist($article);
 
         $article = new Article();
         $article->setTitre("Article 2");
-        $article->setContenu("Morbi viverra facilisis aliquet. Phasellus suscipit arcu id felis tempor, in fringilla turpis dictum. Fusce porta finibus diam, vitae lacinia nibh finibus id. Donec facilisis nisl quis egestas sollicitudin. Aenean quis nulla est. Aliquam volutpat dolor eget ultricies maximus. Maecenas felis turpis, lacinia et purus in, viverra sagittis ex. Ut laoreet est sit amet ligula auctor, in venenatis magna interdum. Maecenas suscipit accumsan libero, auctor ullamcorper lectus porta semper.");
-        $article->setCategory($category);
+        $article->setContenu("https://soundcloud.com/kirilkiril/kiril-whoop");
+        $article->setCategory($category4);
         $manager->persist($article);
 
         $manager->flush();
